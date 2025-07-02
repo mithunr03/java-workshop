@@ -4,11 +4,12 @@ public class TotalMarks {
         int total=0;
         for(int mark:marks){
             total+=mark;
+            System.out.println(mark);
         
 
     
     }
-    System.out.println(total);
+    System.out.println("total marks"+total);
     
     
 }
