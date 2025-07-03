@@ -10,11 +10,11 @@ public class Tempdata {
         private String setContact("9790547219");
 
         System.out.println("name:"+setName);
-         System.out.println("latitude"+altitude);
-          System.out.println("longitude"+ alongitude);
-           System.out.println("set address"+setAdress);
-            System.out.println("set postal code"+setPostalcode);
-             System.out.println("set contact"+setContact);
+        System.out.println("latitude"+altitude);
+        System.out.println("longitude"+ alongitude);
+        System.out.println("set address"+setAdress);
+        System.out.println("set postal code"+setPostalcode);
+        System.out.println("set contact"+setContact);
 
 
       }
