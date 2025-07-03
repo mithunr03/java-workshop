@@ -1,15 +1,12 @@
-public class Hostelbuilding extends Building {
+public class Hostel extends Building {
     private boolean isMessavailable;
     private int Roomsavailable;
-    public Hostelbuilding(boolean isMessavailable,int Roomsavailable) {
-        this.isMessavailable = isMessavailable;
-        this.Roomsavailable = Roomsavailable;
+
+    public void setMessavailable(boolean aisMessavailable) {
+        isMessavailable = aisMessavailable;
     }
-    public boolean isMessavailable() {
+    public boolean getMessavailable(){
         return isMessavailable;
-    }
-    public void setMessavailable(boolean isMessavailable) {
-        this.isMessavailable = isMessavailable;
     }
     public int getIsRoomsavailable() {
         return Roomsavailable;
@@ -18,7 +15,7 @@ public class Hostelbuilding extends Building {
         this.Roomsavailable = isRoomsavailable;
     }
     @Override
-    public void printdetails() {
+    public void printDetails() {
         super.printDetails();
         System.out.println("Hostel Building Details:");
         System.out.println("Mess Available: " + isMessavailable);
