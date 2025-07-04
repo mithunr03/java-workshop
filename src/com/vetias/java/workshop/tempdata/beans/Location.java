@@ -9,6 +9,8 @@ public class Location
     private String city;
     private String address;
     private String Postalcode;
+    private String Building[] building;
+
 
     public Location(String name, double alatitude, double alongitude, String description, String country, String city, String address, String postalcode) {
         this.name = name;
@@ -84,7 +86,8 @@ public class Location
     public void setPostalcode(String postalcode) 
     {
         Postalcode = postalcode;
-    }
+    }public void setBuildings
+
     @Override
     public String toString() 
     {
