@@ -1,5 +1,5 @@
 import java.time.LocalDateTime;
-
+  
 public class Building {
     private String name;
     private double area;
@@ -55,3 +55,4 @@ public class Building {
     
     
 }
+
