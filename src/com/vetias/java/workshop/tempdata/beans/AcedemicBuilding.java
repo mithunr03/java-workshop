@@ -19,8 +19,8 @@ public class AcedemicBuilding {
         this.isauditoriumavailable = isauditoriumavailable;
     }
     @Override
-    public void printdetails() {
-        super.printDetails();
+    public void printDetails() {
+        super.printdetails();
         System.out.println("Academic Building Details:");
         System.out.println("Library Available: " + islibiraryavailable);
         System.out.println("Auditorium Available: " + isauditoriumavailable);
