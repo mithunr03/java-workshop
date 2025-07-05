@@ -113,7 +113,7 @@ public class Location
    {
             this.Building = buildings;
     }
-    
+
 
 
     
@@ -121,10 +121,13 @@ public class Location
     @Override
     public String toString() 
     {
-      return "location{name:"+name+"latitude:"+alatitude+"lomgitude"+alongitude+"description"+description
-    +"country"+country+"city"+city+"address"+address+"postalcode"+Postalcode+
-    "}";
-    } 
+      return "location{name:" + name + " latitude:" + alatitude + " longitude:" + alongitude + " description:" + description
+        + " country:" + country + " city:" + city + " address:" + address + " postalcode:" + Postalcode +
+        "}";
+    }
+    
+    
+   
  
 }
 

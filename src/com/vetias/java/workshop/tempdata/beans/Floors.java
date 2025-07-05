@@ -1,6 +1,7 @@
 public class Floors {
     private String name;
     private int number;
+    private int[] Zone zone;
 
     public Floors(String name, int number) {
         this.name = name;
@@ -17,6 +18,28 @@ public class Floors {
     }
     public void setNumber(int number) {
         this.number = number;
+    }
+   
+    public void setZone(Zone[] zone) {
+        this.Zone = zone;
+    }
+    @Override
+    public String toString() {
+        return "Floors{" +
+                "name='" + name + '\'' +
+                ", number=" + number +
+                ", zone=" + java.util.Arrays.toString(zone) +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Floors floors = (Floors) o;
+        return number == floors.number &&
+                java.util.Objects.equals(name, floors.name) &&
+                java.util.Arrays.equals(zone, floors.zone);
     }
     
 

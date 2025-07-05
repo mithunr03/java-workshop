@@ -6,6 +6,7 @@ public class Building {
     private int floors;
     private LocalDateTime openHours;
     private LocalDateTime CloseHours;
+    private int []Floors floor;
 
 
     public Building(String name, double area, int floors, LocalDateTime openHours, LocalDateTime closeHours) {
@@ -43,7 +44,12 @@ public class Building {
         return CloseHours;
     }
     public void setCloseHours(LocalDateTime closeHours) {
-        CloseHours = closeHours;
+1        CloseHours = closeHours;
+    }
+    public void setFloors( floor)
+    {
+        this.floors = floor;
+        
     }
    
     public void printDetails() {

@@ -37,8 +37,30 @@ public class Zone {
     }
     public void setSensor(int sensor)
     {
-        this.Sensor=sensor;
+        this.Sensor=Sensor;
         
+    }
+    @Override
+    public String toString() {
+        return "Zone{" +
+                "name='" + name + '\'' +
+                ", zoneId=" + zoneId +
+                ", Type='" + Type + '\'' +
+                ", area=" + area +
+                ", Sensor=" + java.util.Arrays.toString(Sensor) +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Zone zone = (Zone) o;
+        return zoneId == zone.zoneId &&
+                Double.compare(zone.area, area) == 0 &&
+                java.util.Objects.equals(name, zone.name) &&
+                java.util.Objects.equals(Type, zone.Type) &&
+                java.util.Arrays.equals(Sensor, zone.Sensor);
     }
     
     

@@ -21,7 +21,23 @@ public class Hostel extends Building {
         System.out.println("Mess Available: " + isMessavailable);
         System.out.println("Rooms Available: " + Roomsavailable);
     }
+    @Override
+    public String toString() {
+        return "Hostel{" +
+                "isMessavailable=" + isMessavailable +
+                ", Roomsavailable=" + Roomsavailable +
+                "} " + super.toString();
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Hostel)) return false;
+        if (!super.equals(o)) return false;
+        Hostel hostel = (Hostel) o;
+        return isMessavailable == hostel.isMessavailable &&
+                Roomsavailable == hostel.Roomsavailable;
+    }
 
 
 }

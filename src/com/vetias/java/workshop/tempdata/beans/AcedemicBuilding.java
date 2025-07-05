@@ -26,6 +26,23 @@ public class AcedemicBuilding {
         System.out.println("Auditorium Available: " + isauditoriumavailable);
     }
 
+    @Override
+    public String toString() {
+        return "AcedemicBuilding{" +
+                "islibiraryavailable=" + islibiraryavailable +
+                ", isauditoriumavailable=" + isauditoriumavailable +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AcedemicBuilding that = (AcedemicBuilding) o;
+
+        if (islibiraryavailable != that.islibiraryavailable) return false;
+        return isauditoriumavailable == that.isauditoriumavailable;
+    }
     
 }
