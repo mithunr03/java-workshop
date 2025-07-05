@@ -5,7 +5,8 @@ public class Building {
     private double area;
     private int floors;
     private LocalDateTime openHours;
-    private LocalDateTime CloseHours;  
+    private LocalDateTime CloseHours;
+
 
     public Building(String name, double area, int floors, LocalDateTime openHours, LocalDateTime closeHours) {
         this.name = name;
@@ -44,6 +45,7 @@ public class Building {
     public void setCloseHours(LocalDateTime closeHours) {
         CloseHours = closeHours;
     }
+   
     public void printDetails() {
         System.out.println("Building Name: " + name);
         System.out.println("Area: " + area + " sq.m");

@@ -3,6 +3,7 @@ public class Zone {
     private int zoneId;
     private String Type;
     private double area;
+    private int Sensor[] sensor;
 
     public Zone(String name, int zoneId, String type, double area) {
         this.name = name;
@@ -33,6 +34,11 @@ public class Zone {
     }
     public void setArea(double area) {
         this.area = area;
+    }
+    public void setSensor(int sensor)
+    {
+        this.Sensor=sensor;
+        
     }
     
     
