@@ -14,13 +14,7 @@ public class Hostel extends Building {
     public void setIsRoomsavailable(int isRoomsavailable) {
         this.Roomsavailable = isRoomsavailable;
     }
-    @Override
-    public void printDetails() {
-        super.printDetails();
-        System.out.println("Hostel Building Details:");
-        System.out.println("Mess Available: " + isMessavailable);
-        System.out.println("Rooms Available: " + Roomsavailable);
-    }
+    
     @Override
     public String toString() {
         return "Hostel{" +

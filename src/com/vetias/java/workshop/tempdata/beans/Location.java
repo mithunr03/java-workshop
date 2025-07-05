@@ -113,11 +113,6 @@ public class Location
    {
             this.Building = buildings;
     }
-
-
-
-    
-
     @Override
     public String toString() 
     {
