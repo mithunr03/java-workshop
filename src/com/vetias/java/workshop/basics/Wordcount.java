@@ -7,10 +7,9 @@ public class Wordcount {
       
         System.out.println(words.length);
         System.out.println(sentance.length());
-        System.out.println(sentences.length);         
+        System.out.println(sentences.length);          
         
-        
-         
+    
     }
 
     
