@@ -8,7 +8,7 @@ public class ParseMethod {
         String birthyear=inputScanner.next();
         LocalDate birthDate= LocalDate.parse(birthyear);
         int year=birthDate.getYear();
-        int finalyear=(birthyear-year);
+        int finalyear=(birthDate-year);
 
         System.out.println("age:"+finalyear);
         inputScanner.close();
