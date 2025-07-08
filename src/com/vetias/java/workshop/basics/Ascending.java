@@ -1,13 +1,15 @@
 import java.util.Arrays;
 public class Ascending {
-      []prices ={30,56,23,29,24};
-        Arrays.sort(prices);
+  public static void main(String[]args){
+      pricess ={30,56,23,29,24};
+        Arrays.sort(pricess);
         System.out.println("list in descending order");
-        for(Double price:prices)
+        for(Double price:pricess)
         {
             System.out.println(price);
         }
 
+}
 }
 
     
