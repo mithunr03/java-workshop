@@ -15,10 +15,10 @@ public class FileHandling {
         {
             System.out.println("it is a directory");
             File[] files=file.listFiles();
-            if(file!=null)
+            if(files!=null)
             {
                 System.out.println("files in the directory");
-                for(File f:file)
+                for(File f: files)
                 {
                   System.out.println(f.getName());
                 }
