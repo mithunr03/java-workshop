@@ -14,7 +14,7 @@ public class Calcuator {
      catch (ArithmeticException e)
      {
         System.out.println(e.getMessage());
-        return 0;
+        return 0;                                                                                               
 
      }
     
@@ -35,5 +35,5 @@ public class Calcuator {
      }
     
 }
-
+}
 
