@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class ParseMethod {
@@ -6,9 +7,11 @@ public class ParseMethod {
         Scanner inputScanner=new Scanner(System.in);
         System.out.printf("Enter your birth year:");
         String birthyear=inputScanner.next();
+        DateTimeFormatter formatter=DateTimeFormatter.ofPattern("dd/mm/yyyy");
         LocalDate birthDate= LocalDate.parse(birthyear);
-        int year=birthDate.getYear();
-        int finalyear=(birthDate-year);
+        int yearofbirth=birthyear.getYear();
+        int year=LocalDate.now().getYear();
+        int finalyear=(year-birthyear);
 
         System.out.println("age:"+finalyear);
         inputScanner.close();
