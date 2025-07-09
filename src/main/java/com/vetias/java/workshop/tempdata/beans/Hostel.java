@@ -1,12 +1,15 @@
 package com.vetias.java.workshop.tempdata.beans;
+
+import java.time.LocalDateTime;
+
 public class Hostel extends Building {
     private boolean isMessavailable;
     private int Roomsavailable;
-
-    public Hostel() {
-        super();
+    public Hostel(String name, double area, int floors, LocalDateTime openHours, LocalDateTime closeHours, boolean isMessavailable, int Roomsavailable) {
+        super(name, area, floors, openHours, closeHours);
+        this.isMessavailable = isMessavailable;
+        this.Roomsavailable = Roomsavailable;
     }
-
     public void setMessavailable(boolean aisMessavailable) {
         isMessavailable = aisMessavailable;
     }
