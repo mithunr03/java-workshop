@@ -2,7 +2,7 @@ package com.vetias.java.workshop.tempdata.beans;
 public class Floors {
     private String name;
     private int number;
-    private int[] Zone zone;
+    private Zone[] zone;
 
     public Floors(String name, int number) {
         this.name = name;
@@ -22,7 +22,7 @@ public class Floors {
     }
    
     public void setZone(Zone[] zone) {
-        this.Zone = zone;
+        this.zone = zone;
     }
     @Override
     public String toString() {

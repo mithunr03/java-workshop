@@ -4,7 +4,7 @@ public class Zone {
     private int zoneId;
     private String Type;
     private double area;
-    private int Sensor[] sensor;
+    private int[] Sensor;
 
     public Zone(String name, int zoneId, String type, double area) {
         this.name = name;

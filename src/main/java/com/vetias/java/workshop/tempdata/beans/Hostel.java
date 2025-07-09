@@ -3,6 +3,10 @@ public class Hostel extends Building {
     private boolean isMessavailable;
     private int Roomsavailable;
 
+    public Hostel() {
+        super();
+    }
+
     public void setMessavailable(boolean aisMessavailable) {
         isMessavailable = aisMessavailable;
     }

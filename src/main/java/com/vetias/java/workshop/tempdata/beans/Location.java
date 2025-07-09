@@ -10,7 +10,7 @@ public class Location
     private String city;
     private String address;
     private String Postalcode;
-    private String Building[] buildings;
+    private String[] buildings;
 
 
     public Location(String name, double alatitude, double alongitude, String description, String country, String city, String address, String postalcode) {
@@ -112,7 +112,7 @@ public class Location
     
    public void setBuilding(String[] buildings) 
    {
-            this.Building = buildings;
+            this.buildings = buildings;
     }
     @Override
     public String toString() 

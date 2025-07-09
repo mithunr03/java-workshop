@@ -25,7 +25,8 @@ public class NameGenerator {
         } 
         else{
             System.out.println("enter a valid gender");
-        }      
+        }   
+        input.close();   
     }
     
 }
