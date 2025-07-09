@@ -1,4 +1,4 @@
-package src.com.vetias.java.workshop.basics;
+package com.vetias.java.workshop.basics;
 public class StringBuilderexample {
     public static void main(String[] args) {
         StringBuilder sb= new StringBuilder();

@@ -1,4 +1,4 @@
-package src.com.vetias.java.workshop.basics;
+package com.vetias.java.workshop.basics;
 public class Calcuator {
     public int  division(int a ,int b)
     {
@@ -19,7 +19,7 @@ public class Calcuator {
 
      }
     
-     public int addition(int a,int b)
+      int addition(int a,int b)
      {
         return a+b;
      }

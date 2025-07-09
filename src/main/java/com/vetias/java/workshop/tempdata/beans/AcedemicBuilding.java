@@ -1,9 +1,12 @@
 package com.vetias.java.workshop.tempdata.beans;
+
+import java.time.LocalDateTime;
+
 public class AcedemicBuilding {
     private boolean islibiraryavailable;
     private boolean isauditoriumavailable;
 
-    public AcedemicBuilding(boolean islibiraryavailable, boolean isauditoriumavailable) {
+    public AcedemicBuilding(String name, double area, int floors, LocalDateTime openHours, LocalDateTime closeHours,boolean islibiraryavailable, boolean isauditoriumavailable) {
         this.islibiraryavailable = islibiraryavailable;
         this.isauditoriumavailable = isauditoriumavailable;
     }
