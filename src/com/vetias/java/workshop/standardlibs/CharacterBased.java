@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class CharacterBased {
     public static void main(String[] args) {
-        try (BufferedReader reader=new BufferedReader(new FileReader("README2.md")))
+        try (BufferedReader reader=new BufferedReader(new FileReader("README.md")))
         {
             String line;
             while((line=reader.readLine())!=null)
@@ -17,6 +17,7 @@ public class CharacterBased {
         catch(IOException e)
         {
             System.out.println("file not found...!");
+            e.printStackTrace();
            
             
             
