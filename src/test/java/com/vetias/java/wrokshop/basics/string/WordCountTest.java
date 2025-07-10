@@ -8,7 +8,13 @@ public class WordCountTest {
     public void testWordcount(){
         WordCount wordCount=new WordCount();
         int count = wordCount.count("this program shows");
-        Assertions.assertEquals(12, count);
+        Assertions.assertEquals(3, count);
+    }
+    @Test
+    public void testAnotherString(){
+        WordCount wordCount=new WordCount();
+        int count = wordCount.count("this program shows how the things are done");
+        Assertions.assertEquals(8, count);
     }
 
 }
