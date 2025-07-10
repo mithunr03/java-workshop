@@ -12,6 +12,10 @@ public class Wordcount {
                                                                                                                                                                                                                                                                            
     
     }
+    // public int count(String inputString)
+    // {
+    //     return 0;
+    // }
 
     
 }
