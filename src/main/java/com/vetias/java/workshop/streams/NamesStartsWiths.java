@@ -3,7 +3,7 @@ package com.vetias.java.workshop.streams;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NmesStartsWiths {
+public class NamesStartsWiths {
  public static void main(String[] args) {
         
     
