@@ -13,7 +13,7 @@ public class NmesStartsWiths {
     names.add("jack");
     names.add("kate");
     names.add("locke");
-    long nameCount=names.stream().filter(name->name.startsWith("m")).count();
+    long nameCount=names.stream().filter(name->name.startsWith("m")).distinct().count();
     System.out.println(nameCount);
 
 }
