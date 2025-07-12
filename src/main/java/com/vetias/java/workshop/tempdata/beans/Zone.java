@@ -36,7 +36,7 @@ public class Zone {
     public void setArea(double area) {
         this.area = area;
     }
-    public void setSensor(int sensor)
+    public void setSensor(int sensor, int[] Sensor)
     {
         this.Sensor=Sensor;
         
