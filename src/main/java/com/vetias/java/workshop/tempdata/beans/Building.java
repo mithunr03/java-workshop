@@ -1,5 +1,6 @@
 package com.vetias.java.workshop.tempdata.beans;
 import java.time.LocalDateTime;
+import java.util.TreeSet;
   
 public class Building {
     private String name;
@@ -10,13 +11,14 @@ public class Building {
     
 
 
-    public Building(String name, double area, int floors, LocalDateTime openHours, LocalDateTime closeHours) {
+    public Building(String name, double area, TreeSet<Integer> floors, LocalDateTime openHours, LocalDateTime closeHours) {
         this.name = name;
         this.area = area;
         this.floors = floors;
         this.openHours = openHours;
         this.CloseHours = closeHours;
     }
+    
     public String getName() {
         return name;
     }
