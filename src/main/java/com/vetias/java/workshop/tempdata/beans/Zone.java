@@ -1,54 +1,83 @@
 package com.vetias.java.workshop.tempdata.beans;
-public class Zone {
-    private String name;
-    private int zoneId;
-    private String Type;
-    private double area;
-    private int[] Sensor;
 
-    public Zone(String name, int zoneId, String type, double area) {
-        this.name = name;
-        this.zoneId = zoneId;
-        Type = type;
-        this.area = area;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+public class Zone{
+    private String name;
+    private String zoneID;
+    private String type;
+    private double area;
+    private String description;
+    private List<Sensor> sensors;
+
+    public Zone(String name, String zoneID, String type,
+            double area, String description,
+            Collection<Sensor> sensors) {
+    this.name = name;
+    this.zoneID = zoneID;
+    this.type = type;
+    this.area = area;
+    this.description = description;
+    this.sensors = (sensors != null) ? new ArrayList<>(sensors) : new ArrayList<>();
     }
+
+    public List<Sensor> getSensors() {
+        return sensors;
+    }
+
+    public void setSensors(List<Sensor> sensors) {
+        this.sensors = sensors;
+    }
+
     public String getName() {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
+
+    public String getZoneID() {
+        return zoneID;
     }
-    public int getZoneId() {
-        return zoneId;
-    }
-    public void setZoneId(int zoneId) {
-        this.zoneId = zoneId;
-    }
+
     public String getType() {
-        return Type;
+        return type;
     }
-    public void setType(String type) {
-        Type = type;
-    }
+
     public double getArea() {
         return area;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setZoneID(String zoneID) {
+        this.zoneID = zoneID;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public void setArea(double area) {
         this.area = area;
     }
-    public void setSensor(int sensor, int[] Sensor)
-    {
-        this.Sensor=Sensor;
-        
+
+    public void setDescription(String description) {
+        this.description = description;
     }
     @Override
     public String toString() {
         return "Zone{" +
                 "name='" + name + '\'' +
-                ", zoneId=" + zoneId +
-                ", Type='" + Type + '\'' +
+                ", zoneID='" + zoneID + '\'' +
+                ", type='" + type + '\'' +
                 ", area=" + area +
-                ", Sensor=" + java.util.Arrays.toString(Sensor) +
+                ", description='" + description + '\'' +
                 '}';
     }
 
@@ -56,13 +85,27 @@ public class Zone {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Zone zone = (Zone) o;
-        return zoneId == zone.zoneId &&
-                Double.compare(zone.area, area) == 0 &&
-                java.util.Objects.equals(name, zone.name) &&
-                java.util.Objects.equals(Type, zone.Type) &&
-                java.util.Arrays.equals(Sensor, zone.Sensor);
+
+        if (Double.compare(zone.area, area) != 0) return false;
+        if (!name.equals(zone.name)) return false;
+        if (!zoneID.equals(zone.zoneID)) return false;
+        if (!type.equals(zone.type)) return false;
+        return description.equals(zone.description);
     }
-    
-    
+
+    @Override
+    public int hashCode() { 
+        int result;
+        long temp;
+        result = name.hashCode();
+        result = 31 * result + zoneID.hashCode();
+        result = 31 * result + type.hashCode();
+        temp = Double.doubleToLongBits(area);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + description.hashCode();
+        return result;
+    }
 }
+
