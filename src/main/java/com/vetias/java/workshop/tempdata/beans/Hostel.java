@@ -1,46 +1,46 @@
-package com.vetias.java.workshop.tempdata.beans;
+// package com.vetias.java.workshop.tempdata.beans;
 
-import java.time.LocalDateTime;
-import java.util.Collection;
-import java.util.Objects;
-public class Hostel extends Building {
-    private boolean isMessavailable;
-    private int Roomsavailable;
-    public Hostel(String name, double area, int floors, LocalDateTime openHours, LocalDateTime closeHours, boolean isMessavailable, int Roomsavailable) {
-        super(name, area, floors, openHours, closeHours,initialFloors);
-        this.isMessavailable = isMessavailable;
-        this.Roomsavailable = Roomsavailable;
-    }
-    public void setMessavailable(boolean aisMessavailable) {
-        isMessavailable = aisMessavailable;
-    }
-    public boolean getMessavailable(){
-        return isMessavailable;
-    }
-    public int getIsRoomsavailable() {
-        return Roomsavailable;
-    }
-    public void setIsRoomsavailable(int isRoomsavailable) {
-        this.Roomsavailable = isRoomsavailable;
-    }
+// import java.time.LocalDateTime;
+// import java.util.Collection;
+// import java.util.Objects;
+// public class Hostel extends Building {
+//     private boolean isMessavailable;
+//     private int Roomsavailable;
+//     public Hostel(String name, double area, int floors, LocalDateTime openHours, LocalDateTime closeHours, boolean isMessavailable, int Roomsavailable) {
+//         super(name, area, floors, openHours, closeHours,initialFloors);
+//         this.isMessavailable = isMessavailable;
+//         this.Roomsavailable = Roomsavailable;
+//     }
+//     public void setMessavailable(boolean aisMessavailable) {
+//         isMessavailable = aisMessavailable;
+//     }
+//     public boolean getMessavailable(){
+//         return isMessavailable;
+//     }
+//     public int getIsRoomsavailable() {
+//         return Roomsavailable;
+//     }
+//     public void setIsRoomsavailable(int isRoomsavailable) {
+//         this.Roomsavailable = isRoomsavailable;
+//     }
     
-    @Override
-    public String toString() {
-        return "Hostel{" +
-                "isMessavailable=" + isMessavailable +
-                ", Roomsavailable=" + Roomsavailable +
-                "} " + super.toString();
-    }
+//     @Override
+//     public String toString() {
+//         return "Hostel{" +
+//                 "isMessavailable=" + isMessavailable +
+//                 ", Roomsavailable=" + Roomsavailable +
+//                 "} " + super.toString();
+//     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Hostel)) return false;
-        if (!super.equals(o)) return false;
-        Hostel hostel = (Hostel) o;
-        return isMessavailable == hostel.isMessavailable &&
-                Roomsavailable == hostel.Roomsavailable;
-    }
+//     @Override
+//     public boolean equals(Object o) {
+//         if (this == o) return true;
+//         if (!(o instanceof Hostel)) return false;
+//         if (!super.equals(o)) return false;
+//         Hostel hostel = (Hostel) o;
+//         return isMessavailable == hostel.isMessavailable &&
+//                 Roomsavailable == hostel.Roomsavailable;
+//     }
 
 
-}
+// }
