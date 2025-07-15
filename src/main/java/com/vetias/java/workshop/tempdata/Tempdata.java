@@ -1,6 +1,6 @@
 package com.vetias.java.workshop.tempdata;
 
-import java.time.LocalDate;
+
 
 import com.vetias.java.workshop.tempdata.beans.Organization;
 
@@ -19,8 +19,8 @@ public class Tempdata {
         // System.out.println("set address:" + setAdress);
         // System.out.println("set postal code:" + setPostalcode);
         // System.out.println("set contact:" + setContact);
-        Organization vet=new Organization("Vellalar Educational Trust","thindal  erode", "vet@gmail.com","www.vetias.com","9790547219",""
-                                          ,9223344,LocalDate.of(1960,07,20));
+        Organization vet=new Organization("Vellalar Educational Trust", "vet@gmail.com","www.vetias.com","9790547219","VET "
+                                          ,9223344);
         System.out.println(vet);
 
       }

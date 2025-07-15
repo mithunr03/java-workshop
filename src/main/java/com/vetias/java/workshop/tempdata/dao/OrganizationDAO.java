@@ -3,6 +3,7 @@ package com.vetias.java.workshop.tempdata.dao;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import com.vetias.java.workshop.tempdata.beans.Organization;
 
@@ -53,6 +54,7 @@ public class OrganizationDAO {
                 int AUTO_INCREMENT PRIMARY KEY,
                 NAME VARCHAR(100),
                 EMAIL VARCHAR(100),
+                WEBSITE VARCHAR(100),
                 CONTACT_NUMBER VARCHAR(100),
                 REGISTRATION_NO INT,
                 DESCRIPTION VARCHAR(255))
@@ -81,6 +83,36 @@ public class OrganizationDAO {
     }
     return 0;
 }
+public Organization findByname(Connection dbConnection,String name) {
+       Organization organization=null;
+      try(PreparedStatement preparedStatement=dbConnection.prepareStatement("""
+              select * from organization where name=?
+              """)){
+        preparedStatement.setString(1, name);
+        ResultSet resultSet=preparedStatement.executeQuery();
+        if(resultSet !=null && resultSet.next())
+        {
+            organization =new Organization(
+            resultSet.getString("NAME"),
+            resultSet.getString("EMAIL"),
+            resultSet.getString("WEBSITE"),
+            resultSet.getString("CONTACT_NUMBER"),
+            resultSet.getString("REGISTRATION_NO"),
+            resultSet.getLong("DESCRIPTION")
+            );
+            
+
+        }
+
+      }catch (SQLException exception) {
+        System.out.println("Error finding table :" +exception);
+        
+      }
+      return organization;
+
+    }
+
 }
+
 
 

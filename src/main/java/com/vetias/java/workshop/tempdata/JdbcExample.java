@@ -3,7 +3,7 @@ package com.vetias.java.workshop.tempdata;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.time.LocalDate;
+
 
 import com.vetias.java.workshop.tempdata.beans.Organization;
 import com.vetias.java.workshop.tempdata.dao.OrganizationDAO;
@@ -26,14 +26,14 @@ public class JdbcExample {
             OrganizationDAO organizationDAO=new OrganizationDAO();
             organizationDAO.createTable(dbConnection);
             Organization vet=new Organization( "vet",
-            "thindal erode",
             "vet@gmail.com",
-            "www.vetias.com"
-            ,"9790547219",
+            "www.vetias.com",
+            "9790547219",
             "vellalar education trust",
-            999402L,
-            LocalDate.of(1960, 07, 20) );
-           
+            999402L);
+           organizationDAO.save(dbConnection,vet);
+           Organization myOrganization= organizationDAO.findByname(dbConnection, "vet");
+           System.out.println(myOrganization);
         }        
 
 
