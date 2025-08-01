@@ -18,6 +18,7 @@ public class SplitMarks {
             System.out.println(mark);
         }
 
+        
     }
     
 }
