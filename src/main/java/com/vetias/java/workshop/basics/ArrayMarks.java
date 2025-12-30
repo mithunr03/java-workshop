@@ -4,6 +4,7 @@ public class ArrayMarks {
         int [] marks ={90,99,94,98,99};
         for(int mark:marks){
         System.out.println(mark);
+        //new chnage for testing
     }
     
 }
